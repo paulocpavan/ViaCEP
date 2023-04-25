@@ -31,6 +31,7 @@ public class Principal {
             } catch (RuntimeException | IOException e) {
                 System.out.println(e.getMessage());
                 System.out.println("Finalizando aplicação");
+                gerador.salvaErro(e.getMessage() + ": " + cep);
             }
         }
         gerador.close();

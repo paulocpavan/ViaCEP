@@ -23,7 +23,13 @@ public class GeradorDeArquivo {
         escrita.write(gson.toJson(endereco));
     }
 
+    public void salvaErro(String mensagem) throws IOException{
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        escrita.write(mensagem);
+        escrita.write("\n");
+    }
     public void close() throws IOException {
         escrita.close();
     }
+
 }
