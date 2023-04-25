@@ -27,6 +27,7 @@ public class Principal {
                 System.out.println(novoEndereco);
                 consultaCEPList.add(novoEndereco);
 
+                gerador.adicionaCEP(cep);
                 gerador.salvaJson(novoEndereco);
             } catch (RuntimeException | IOException e) {
                 System.out.println(e.getMessage());
